@@ -1,8 +1,12 @@
 const express = require('express')
+const db = require('./config/db')
 const app = express()
 
-app.get('/', (req, res) => {
-  res.send({title: 'Hello world'})
+require("dotenv").config({path: './config/.env'});
+
+app.get('/', async (req, res) => {
+
+
 })
 
 const port = process.env.PORT || 3000
