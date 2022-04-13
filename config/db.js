@@ -10,11 +10,8 @@ const options = {
   port: process.env.DB_PORT,
 };
 
-const pool = new Pool(options);
+console.log(process.env)
 
-pool.query('SELECT * FROM envelops', (err, result) => {
-  console.log(process.env)
-  console.log(result.rows)
-})
+const db = new Pool(options);
 
-module.exports = { pool };
+module.exports = { db };
