@@ -10,8 +10,6 @@ const options = {
   port: process.env.DB_PORT,
 };
 
-console.log(process.env)
-
 const db = new Pool(options);
 
 module.exports = { db };
