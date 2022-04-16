@@ -14,7 +14,7 @@ const getEnvelopes = async (req, res) => {
       data: envelopes.rows,
     });
   } catch (error) {
-    res.status(500).send({ error: error.message });
+    res.status(500).send({ message: error.message });
   }
 };
 
@@ -35,7 +35,7 @@ const getEnvelopeById = async (req, res) => {
       data: envelope.rows[0],
     });
   } catch (error) {
-    res.status(500).send({ error: error.message });
+    res.status(500).send({ message: error.message });
   }
 };
 
